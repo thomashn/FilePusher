@@ -1,6 +1,7 @@
 import os
 
 import cherrypy
+from cherrypy.process.plugins import DropPrivileges, PIDFile
 
 from .server import FilePusher
 from .operations import ServerOperations
