@@ -8,6 +8,6 @@ setup(
     author='Thomas Hanssen Nornes',
     author_email='thomas.nornes@gmail.com',
     license='MIT',
-    packages=['filepusher'],
+    packages=['app'],
     install_requires=['cherrypy'],
     zip_safe=False)
