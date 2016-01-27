@@ -45,7 +45,7 @@ class ServerOperations():
         possible.extend(list(string.digits))
         possible.extend(list(string.ascii_uppercase))
         url = ""
-        for i in range(0,31):
+        for i in range(0,23):
             letter = random.randint(0,len(possible)-1)
             url += possible[letter]
         return url 
