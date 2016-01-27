@@ -1,4 +1,6 @@
 import os
+from pwd import getpwnam  
+
 
 import cherrypy
 from cherrypy.process.plugins import DropPrivileges, PIDFile
@@ -15,8 +17,8 @@ class Main():
         self.config = path+"/../server.conf"
         self.pid = path+"/../server.pid"
         # OS specific
-        self.uid = os.system("id -u filepusher") 
-        self.gid = os.system("id -g filepusher")
+        self.uid = getpwnam('filepusher').pw_uid)
+        self.gid = getpwnam('filepusher').pw_gid)
 
     def run(self):
         if os.path.isfile(self.database):
