@@ -1,0 +1,13 @@
+[global]
+server.socket_host = '127.0.0.1'
+server.socket_port = 8080
+server.ssl_module = 'builtin'
+server.ssl_certificate = "/somefolder/ssl/cert.pem"
+server.ssl_private_key = "/somefolder/ssl/privkey.pem"
+
+[/]
+tools.sessions.on = True
+tools.sessions.timeout = 60
+tools.sessions.secure = True
+tools.sessions.httponly = True
+
