@@ -17,8 +17,8 @@ class Main():
         self.config = path+"/../server.conf"
         self.pid = path+"/../server.pid"
         # OS specific
-        self.uid = getpwnam('filepusher').pw_uid)
-        self.gid = getpwnam('filepusher').pw_gid)
+        self.uid = getpwnam('filepusher').pw_uid
+        self.gid = getpwnam('filepusher').pw_gid
 
     def run(self):
         if os.path.isfile(self.database):
