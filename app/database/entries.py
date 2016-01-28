@@ -10,10 +10,11 @@ class User(Basic):
         self.salt = salt
 
 class File(Basic):
-    def __init__(self,id,name,URL,ownerId,dlRemaining):
+    def __init__(self,id,name,URL,ownerId,maxDownloads,timesDownloaded):
         Basic.__init__(self,id,name)
         self.URL = URL
-        self.dlRemaining = dlRemaining
+        self.maxDownloads = maxDownloads
         self.ownerId = ownerId
         self.fullPath = None
+        self.timesDownloaded = timesDownloaded
 
